@@ -159,6 +159,9 @@ public class ConsoleApp {
                 3- Search by id
                 4- Search by download count
                 5- Search by authorId
+                6- Search by author live in a year
+                7- Get all authors
+                8- Get all books
                 
                 0- Return
                 """);
@@ -223,6 +226,23 @@ public class ConsoleApp {
                 });
 
                 showLocalSearchOption();
+                break;
+            case 6:
+                System.out.print("year: ");
+                int year = scanner.nextInt();
+                scanner.nextLine();
+                var authorAlive = controller.findAuthorsAliveInYear(year);
+                authorAlive.forEach(authorDto -> System.out.println(authorDto.toString()));
+
+                showLocalSearchOption();
+                break;
+            case 7:
+                var authors = controller.getAllAuthor();
+                authors.forEach(System.out::println);
+                break;
+            case 8:
+                var books = controller.getAllLocalBooks();
+                books.forEach(System.out::println);
                 break;
             case 0:
                 showMainOption();

@@ -1,11 +1,12 @@
 package one.alura.gablibrary.controller;
 
+import one.alura.gablibrary.model.dtos.AuthorDto;
 import one.alura.gablibrary.model.dtos.BookDto;
+import one.alura.gablibrary.model.entities.Author;
 import one.alura.gablibrary.model.entities.Book;
 import one.alura.gablibrary.service.LibraryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Controller;
 
 import java.io.FileWriter;
 import java.io.IOException;
@@ -36,7 +37,18 @@ public class ConsoleAppController {
             service.saveBook(Book.fromDto(b));
         });
     }
-
+    public void saveAuthor(Author author){
+        service.saveAuthor(author);
+    }
+    public List<AuthorDto> getAllAuthor(){
+        return service.getAllAuthor();
+    }
+    public List<AuthorDto> findAuthorsAliveInYear(int year){
+        return service.findAuthorsAliveInYear(year);
+    }
+    public List<BookDto> getAllLocalBooks() {
+        return service.getAllLocalBooks();
+    }
     public List<BookDto> searchByTitleOrName(String title) {
         return service.getBooksBySearch(title);
     }

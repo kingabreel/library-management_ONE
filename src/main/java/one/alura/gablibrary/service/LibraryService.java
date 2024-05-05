@@ -6,6 +6,7 @@ import one.alura.gablibrary.model.dtos.AuthorDto;
 import one.alura.gablibrary.model.dtos.BookDto;
 import one.alura.gablibrary.model.entities.Author;
 import one.alura.gablibrary.model.entities.Book;
+import one.alura.gablibrary.repository.AuthorRepository;
 import one.alura.gablibrary.repository.LibraryRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -21,10 +22,45 @@ public class LibraryService {
     @Autowired
     private LibraryRepository repository;
 
+    @Autowired
+    private AuthorRepository authorRepository;
+
+
     public void saveBook(Book book){
         repository.save(book);
     }
 
+    public void saveAuthor(Author author){
+        authorRepository.save(author);
+    }
+    public List<AuthorDto> getAllAuthor(){
+        var list = authorRepository.findAll();
+        List<AuthorDto> dtoList = new ArrayList<>();
+        list.forEach(a -> {
+            dtoList.add(AuthorDto.fromRep(a));
+        });
+
+        return dtoList;
+    }
+    public List<AuthorDto> findAuthorsAliveInYear(int year){
+        var list = authorRepository.findAuthorsAliveInYear(year);
+
+        List<AuthorDto> dtoList = new ArrayList<>();
+        list.forEach(author -> {
+            dtoList.add(AuthorDto.fromRep(author));
+        });
+
+        return dtoList;
+    }
+    public List<BookDto> getAllLocalBooks() {
+        var list = repository.findAll();
+        List<BookDto> bookDtos = new ArrayList<>();
+
+        list.forEach(b -> {
+            bookDtos.add(BookDto.fromRep(b));
+        });
+        return bookDtos;
+    }
     public List<BookDto> getBooksBySearch(String term) {
         List<BookDto> list = new ArrayList<>();
 
