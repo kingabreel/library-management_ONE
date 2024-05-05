@@ -28,6 +28,6 @@ public class BookDto {
 
     @Override
     public String toString(){
-        return "{\n\ttitle: " + getTitle() + "\n\tauthor: " + getAuthor() + "\n\tSubject: " + getSubject() + "\n\tLanguage: " + getLanguage() + "\n\tDownloads: " + getDownloadCount();
+        return "{\n\ttitle: " + getTitle() + "\n\tauthor: " + getAuthor() + "\n\tSubject: " + getSubject() + "\n\tLanguage: " + getLanguage() + "\n\tDownloads: " + getDownloadCount() + "\n}";
     }
 }

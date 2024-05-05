@@ -2,18 +2,25 @@ package one.alura.gablibrary.view;
 
 import one.alura.gablibrary.controller.ConsoleAppController;
 import one.alura.gablibrary.model.dtos.BookDto;
-import one.alura.gablibrary.service.LibraryService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+@Component
 public class ConsoleApp {
-    private Scanner scanner;
+    private final Scanner scanner;
+    @Autowired
     private ConsoleAppController controller;
     private List<BookDto> searchList;
-    public ConsoleApp(){
-        scanner =  new Scanner(System.in);
-        controller = new ConsoleAppController(new LibraryService());
+
+    public ConsoleApp(ConsoleAppController controller){
+        this.controller = controller;
+        this.scanner = new Scanner(System.in);
+        this.searchList = new ArrayList<>();
+
         System.out.println("Welcome to Gab's Library application!");
         showMainOption();
     }
@@ -40,9 +47,11 @@ public class ConsoleApp {
                 break;
             case 3:
                 controller.saveLocalDb(searchList);
+                showMainOption();
                 break;
             case 4:
-
+                controller.saveToLocalTxt(searchList);
+                showMainOption();
                 break;
             case 0:
                 System.exit(0);
@@ -92,22 +101,50 @@ public class ConsoleApp {
                             });
                         }
                     } else {
-                        byLanguagelist.forEach(bookDto -> {
-                            System.out.println(bookDto.toString());
-                        });
+                        System.out.println(byLanguagelist.stream()
+                                .findFirst()
+                                .get());
                     }
                     searchList.addAll(byLanguagelist);
                 } else {
                     System.out.println("Language not accepted");
                 }
-
+                showSearchOptions();
                 break;
             case 3:
-                controller.saveLocalDb(searchList);
-                System.out.println("Saved to local database");
+                System.out.print("Topic to search: ");
+                String topicSearch = scanner.nextLine();
+
+                var booksByTopic = controller.searchByTopic(topicSearch);
+
+                booksByTopic.forEach(bookDto -> {
+                    System.out.println(bookDto.toString());
+                });
+                searchList.addAll(booksByTopic);
+                showSearchOptions();
                 break;
             case 4:
+                System.out.println("With copyrighting? y or n");
+                String copyChoose = scanner.nextLine();
 
+                var booksByCopyrighting = controller.searchByCopyrighting(copyChoose.equalsIgnoreCase("y"));
+
+                booksByCopyrighting.forEach(bookDto -> {
+                    System.out.println(bookDto.toString());
+                });
+                searchList.addAll(booksByCopyrighting);
+                showSearchOptions();
+                break;
+            case 5:
+                System.out.print("Id: ");
+                int id = scanner.nextInt();
+                var byIdSearch = controller.searchById(id);
+
+                if (byIdSearch != null) System.out.println(byIdSearch);
+                else System.out.println("Not Found");
+
+                searchList.add(byIdSearch);
+                showSearchOptions();
                 break;
             case 0:
                 showMainOption();
@@ -123,7 +160,73 @@ public class ConsoleApp {
                 4- Search by download count
                 5- Search by authorId
                 
-                0- Exit
+                0- Return
                 """);
+        int chose = scanner.nextInt();
+        scanner.nextLine();
+        switch (chose){
+            case 1:
+                System.out.print("Book title: ");
+                var bookName = scanner.nextLine();
+
+                var bookByTitle = controller.searchLocalByTitle(bookName);
+
+                bookByTitle.forEach(bookDto -> {
+                    System.out.println(bookDto.toString() + "\n");
+                });
+                showLocalSearchOption();
+                break;
+            case 2:
+                System.out.println("Options: \npt, fr, en, de, el, it");
+                System.out.print("Language: ");
+
+                var bookLang = scanner.nextLine();
+
+                var bookByLang = controller.searchLocalByLanguage(bookLang);
+
+                bookByLang.forEach(bookDto -> {
+                    System.out.println(bookDto.toString() + "\n");
+                });
+                showLocalSearchOption();
+                break;
+            case 3:
+                System.out.print("Book id: ");
+                int bookId = scanner.nextInt();
+
+                var bookById = controller.searchLocalById(bookId);
+
+                System.out.println(bookById.toString());
+                showLocalSearchOption();
+                break;
+            case 4:
+                System.out.print("Download count minimum: ");
+
+                var downCount = scanner.nextInt();
+
+                var booksGreaterThan = controller.searchLocalByDownloadCount(downCount);
+
+                booksGreaterThan.forEach(bookDto -> {
+                    System.out.println(bookDto.toString() + "\n");
+                });
+
+                showLocalSearchOption();
+                break;
+            case 5:
+                System.out.print("Author id: ");
+
+                var authorId = scanner.nextInt();
+
+                var bookByAuthor = controller.searchLocalByAuthorId(authorId);
+
+                bookByAuthor.forEach(bookDto -> {
+                    System.out.println(bookDto.toString() + "\n");
+                });
+
+                showLocalSearchOption();
+                break;
+            case 0:
+                showMainOption();
+                break;
+        }
     }
 }

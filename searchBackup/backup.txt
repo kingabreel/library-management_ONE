@@ -1,0 +1,32 @@
+{
+	title: My Life — Volume 1
+	author: AuthorDto(name=Wagner, Richard, birth_year=1813, death_year=1883)
+	Subject: Composers -- Germany -- Biography
+	Language: en
+	Downloads: 31322
+}
+
+{
+	title: The Tragical History of Doctor Faustus: From the Quarto of 1604
+	author: AuthorDto(name=Marlowe, Christopher, birth_year=1564, death_year=1593)
+	Subject: Faust, -approximately 1540 -- Drama
+	Language: en
+	Downloads: 4776
+}
+
+{
+	title: The Tragical History of Doctor Faustus: From the Quarto of 1604
+	author: AuthorDto(name=Marlowe, Christopher, birth_year=1564, death_year=1593)
+	Subject: Faust, -approximately 1540 -- Drama
+	Language: en
+	Downloads: 4776
+}
+
+{
+	title: A Chronicle of London from 1089 to 1483: Written in the Fifteenth Century, and for the First Time Printed from MSS. in the British Museum
+	author: AuthorDto(name=Anonymous, birth_year=null, death_year=null)
+	Subject: London (England) -- History -- To 1500
+	Language: en
+	Downloads: 639
+}
+
