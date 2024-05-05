@@ -25,4 +25,9 @@ public class BookDto {
 
         return bookDto;
     }
+
+    @Override
+    public String toString(){
+        return "{\n\ttitle: " + getTitle() + "\n\tauthor: " + getAuthor() + "\n\tSubject: " + getSubject() + "\n\tLanguage: " + getLanguage() + "\n\tDownloads: " + getDownloadCount();
+    }
 }
