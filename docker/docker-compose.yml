@@ -1,0 +1,17 @@
+version: '3.8'
+
+volumes:
+  data:
+
+services:
+  postgres:
+    image: postgres
+    container_name: libraryPostgres
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_DB: library
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: 123
+    volumes:
+      - data:/var/lib/postgresql/data
