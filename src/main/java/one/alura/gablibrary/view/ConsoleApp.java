@@ -96,9 +96,7 @@ public class ConsoleApp {
                         System.out.println("Show all? y or n");
                         var choseLanguage = scanner.nextLine();
                         if (choseLanguage.equalsIgnoreCase("y")){
-                            byLanguagelist.forEach(bookDto -> {
-                                System.out.println(bookDto.toString());
-                            });
+                            byLanguagelist.forEach(bookDto -> System.out.println(bookDto.toString()));
                         }
                     } else {
                         System.out.println(byLanguagelist.stream()
@@ -117,9 +115,7 @@ public class ConsoleApp {
 
                 var booksByTopic = controller.searchByTopic(topicSearch);
 
-                booksByTopic.forEach(bookDto -> {
-                    System.out.println(bookDto.toString());
-                });
+                booksByTopic.forEach(bookDto -> System.out.println(bookDto.toString()));
                 searchList.addAll(booksByTopic);
                 showSearchOptions();
                 break;
@@ -129,9 +125,7 @@ public class ConsoleApp {
 
                 var booksByCopyrighting = controller.searchByCopyrighting(copyChoose.equalsIgnoreCase("y"));
 
-                booksByCopyrighting.forEach(bookDto -> {
-                    System.out.println(bookDto.toString());
-                });
+                booksByCopyrighting.forEach(bookDto -> System.out.println(bookDto.toString()));
                 searchList.addAll(booksByCopyrighting);
                 showSearchOptions();
                 break;
@@ -174,9 +168,7 @@ public class ConsoleApp {
 
                 var bookByTitle = controller.searchLocalByTitle(bookName);
 
-                bookByTitle.forEach(bookDto -> {
-                    System.out.println(bookDto.toString() + "\n");
-                });
+                bookByTitle.forEach(bookDto -> System.out.println(bookDto.toString() + "\n"));
                 showLocalSearchOption();
                 break;
             case 2:
@@ -187,9 +179,7 @@ public class ConsoleApp {
 
                 var bookByLang = controller.searchLocalByLanguage(bookLang);
 
-                bookByLang.forEach(bookDto -> {
-                    System.out.println(bookDto.toString() + "\n");
-                });
+                bookByLang.forEach(bookDto -> System.out.println(bookDto.toString() + "\n"));
                 showLocalSearchOption();
                 break;
             case 3:
@@ -208,9 +198,7 @@ public class ConsoleApp {
 
                 var booksGreaterThan = controller.searchLocalByDownloadCount(downCount);
 
-                booksGreaterThan.forEach(bookDto -> {
-                    System.out.println(bookDto.toString() + "\n");
-                });
+                booksGreaterThan.forEach(bookDto -> System.out.println(bookDto.toString() + "\n"));
 
                 showLocalSearchOption();
                 break;
@@ -221,9 +209,7 @@ public class ConsoleApp {
 
                 var bookByAuthor = controller.searchLocalByAuthorId(authorId);
 
-                bookByAuthor.forEach(bookDto -> {
-                    System.out.println(bookDto.toString() + "\n");
-                });
+                bookByAuthor.forEach(bookDto -> System.out.println(bookDto.toString() + "\n"));
 
                 showLocalSearchOption();
                 break;

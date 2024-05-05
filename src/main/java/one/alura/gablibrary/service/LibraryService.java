@@ -36,9 +36,7 @@ public class LibraryService {
     public List<AuthorDto> getAllAuthor(){
         var list = authorRepository.findAll();
         List<AuthorDto> dtoList = new ArrayList<>();
-        list.forEach(a -> {
-            dtoList.add(AuthorDto.fromRep(a));
-        });
+        list.forEach(a -> dtoList.add(AuthorDto.fromRep(a)));
 
         return dtoList;
     }
@@ -46,9 +44,7 @@ public class LibraryService {
         var list = authorRepository.findAuthorsAliveInYear(year);
 
         List<AuthorDto> dtoList = new ArrayList<>();
-        list.forEach(author -> {
-            dtoList.add(AuthorDto.fromRep(author));
-        });
+        list.forEach(author -> dtoList.add(AuthorDto.fromRep(author)));
 
         return dtoList;
     }
@@ -56,9 +52,7 @@ public class LibraryService {
         var list = repository.findAll();
         List<BookDto> bookDtos = new ArrayList<>();
 
-        list.forEach(b -> {
-            bookDtos.add(BookDto.fromRep(b));
-        });
+        list.forEach(b -> bookDtos.add(BookDto.fromRep(b)));
         return bookDtos;
     }
     public List<BookDto> getBooksBySearch(String term) {
@@ -94,9 +88,7 @@ public class LibraryService {
 
     private List<BookDto> convertBook(List<Book> list){
         List<BookDto> books = new ArrayList<>();
-        list.forEach(b -> {
-            books.add(BookDto.fromRep(b));
-        });
+        list.forEach(b -> books.add(BookDto.fromRep(b)));
         return books;
     }
 

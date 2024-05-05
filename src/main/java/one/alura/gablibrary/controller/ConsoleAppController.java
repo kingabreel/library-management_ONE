@@ -33,9 +33,7 @@ public class ConsoleAppController {
         languagesAcepted.add("el");
     }
     public void saveLocalDb(List<BookDto> bookList) {
-        bookList.forEach(b -> {
-            service.saveBook(Book.fromDto(b));
-        });
+        bookList.forEach(b -> service.saveBook(Book.fromDto(b)));
     }
     public void saveAuthor(Author author){
         service.saveAuthor(author);
