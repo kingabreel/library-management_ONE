@@ -1,32 +1,264 @@
 {
-	title: My Life — Volume 1
-	author: AuthorDto(name=Wagner, Richard, birth_year=1813, death_year=1883)
-	Subject: Composers -- Germany -- Biography
+	title: Thus Spake Zarathustra: A Book for All and None
+	author: AuthorDto(name=Nietzsche, Friedrich Wilhelm, birth_year=1844, death_year=1900)
+	Subject: Philosophy, German
 	Language: en
-	Downloads: 31322
+	Downloads: 10428
 }
 
 {
-	title: The Tragical History of Doctor Faustus: From the Quarto of 1604
-	author: AuthorDto(name=Marlowe, Christopher, birth_year=1564, death_year=1593)
-	Subject: Faust, -approximately 1540 -- Drama
+	title: Beyond Good and Evil
+	author: AuthorDto(name=Nietzsche, Friedrich Wilhelm, birth_year=1844, death_year=1900)
+	Subject: Ethics
 	Language: en
-	Downloads: 4776
+	Downloads: 8466
 }
 
 {
-	title: The Tragical History of Doctor Faustus: From the Quarto of 1604
-	author: AuthorDto(name=Marlowe, Christopher, birth_year=1564, death_year=1593)
-	Subject: Faust, -approximately 1540 -- Drama
+	title: The Genealogy of Morals: The Complete Works, Volume Thirteen, edited by Dr. Oscar Levy.
+	author: AuthorDto(name=Nietzsche, Friedrich Wilhelm, birth_year=1844, death_year=1900)
+	Subject: Ethics
 	Language: en
-	Downloads: 4776
+	Downloads: 3451
 }
 
 {
-	title: A Chronicle of London from 1089 to 1483: Written in the Fifteenth Century, and for the First Time Printed from MSS. in the British Museum
-	author: AuthorDto(name=Anonymous, birth_year=null, death_year=null)
-	Subject: London (England) -- History -- To 1500
+	title: The Antichrist
+	author: AuthorDto(name=Nietzsche, Friedrich Wilhelm, birth_year=1844, death_year=1900)
+	Subject: Christianity -- Controversial literature
 	Language: en
-	Downloads: 639
+	Downloads: 3153
+}
+
+{
+	title: The Birth of Tragedy; or, Hellenism and Pessimism
+	author: AuthorDto(name=Nietzsche, Friedrich Wilhelm, birth_year=1844, death_year=1900)
+	Subject: Aesthetics
+	Language: en
+	Downloads: 2650
+}
+
+{
+	title: The Twilight of the Idols; or, How to Philosophize with the Hammer. The Antichrist: Complete Works, Volume Sixteen
+	author: AuthorDto(name=Nietzsche, Friedrich Wilhelm, birth_year=1844, death_year=1900)
+	Subject: Philosophy
+	Language: en
+	Downloads: 2593
+}
+
+{
+	title: Ecce Homo: Complete Works, Volume Seventeen
+	author: AuthorDto(name=Nietzsche, Friedrich Wilhelm, birth_year=1844, death_year=1900)
+	Subject: Nietzsche, Friedrich Wilhelm, 1844-1900
+	Language: en
+	Downloads: 1758
+}
+
+{
+	title: Also sprach Zarathustra: Ein Buch für Alle und Keinen
+	author: AuthorDto(name=Nietzsche, Friedrich Wilhelm, birth_year=1844, death_year=1900)
+	Subject: Philosophy, German
+	Language: de
+	Downloads: 1632
+}
+
+{
+	title: Human, All Too Human: A Book for Free Spirits
+	author: AuthorDto(name=Nietzsche, Friedrich Wilhelm, birth_year=1844, death_year=1900)
+	Subject: Human beings
+	Language: en
+	Downloads: 1458
+}
+
+{
+	title: The Will to Power: An Attempted Transvaluation of All Values. Book I and II
+	author: AuthorDto(name=Nietzsche, Friedrich Wilhelm, birth_year=1844, death_year=1900)
+	Subject: Nihilism (Philosophy)
+	Language: en
+	Downloads: 1088
+}
+
+{
+	title: The Will to Power: An Attempted Transvaluation of All Values. Book III and IV
+	author: AuthorDto(name=Nietzsche, Friedrich Wilhelm, birth_year=1844, death_year=1900)
+	Subject: Nihilism (Philosophy)
+	Language: en
+	Downloads: 1042
+}
+
+{
+	title: The Joyful Wisdom ("La Gaya Scienza")
+	author: AuthorDto(name=Nietzsche, Friedrich Wilhelm, birth_year=1844, death_year=1900)
+	Subject: Philosophy
+	Language: en
+	Downloads: 1009
+}
+
+{
+	title: The Dawn of Day
+	author: AuthorDto(name=Nietzsche, Friedrich Wilhelm, birth_year=1844, death_year=1900)
+	Subject: Ethics
+	Language: en
+	Downloads: 873
+}
+
+{
+	title: Der Wille zur Macht: Eine Auslegung alles Geschehens
+	author: AuthorDto(name=Nietzsche, Friedrich Wilhelm, birth_year=1844, death_year=1900)
+	Subject: Nihilism (Philosophy)
+	Language: de
+	Downloads: 701
+}
+
+{
+	title: The Case of Wagner, Nietzsche Contra Wagner, and Selected Aphorisms.
+	author: AuthorDto(name=Nietzsche, Friedrich Wilhelm, birth_year=1844, death_year=1900)
+	Subject: Essays
+	Language: en
+	Downloads: 457
+}
+
+{
+	title: Human, All-Too-Human: A Book for Free Spirits, Part 2
+	author: AuthorDto(name=Nietzsche, Friedrich Wilhelm, birth_year=1844, death_year=1900)
+	Subject: Human beings
+	Language: en
+	Downloads: 455
+}
+
+{
+	title: Jenseits von Gut und Böse
+	author: AuthorDto(name=Nietzsche, Friedrich Wilhelm, birth_year=1844, death_year=1900)
+	Subject: Ethics
+	Language: de
+	Downloads: 452
+}
+
+{
+	title: Index of the Project Gutenberg Works of Friedrich Nietzsche
+	author: AuthorDto(name=Nietzsche, Friedrich Wilhelm, birth_year=1844, death_year=1900)
+	Subject: Indexes
+	Language: en
+	Downloads: 426
+}
+
+{
+	title: Early Greek Philosophy & Other Essays: Collected Works, Volume Two
+	author: AuthorDto(name=Nietzsche, Friedrich Wilhelm, birth_year=1844, death_year=1900)
+	Subject: Philosophy, Ancient
+	Language: en
+	Downloads: 345
+}
+
+{
+	title: Beyond Good and Evil
+	author: AuthorDto(name=Nietzsche, Friedrich Wilhelm, birth_year=1844, death_year=1900)
+	Subject: Ethics
+	Language: en
+	Downloads: 329
+}
+
+{
+	title: Ainsi Parlait Zarathoustra
+	author: AuthorDto(name=Nietzsche, Friedrich Wilhelm, birth_year=1844, death_year=1900)
+	Subject: Philosophy, German
+	Language: fr
+	Downloads: 290
+}
+
+{
+	title: Thoughts Out of Season, Part II
+	author: AuthorDto(name=Nietzsche, Friedrich Wilhelm, birth_year=1844, death_year=1900)
+	Subject: History -- Study and teaching
+	Language: en
+	Downloads: 257
+}
+
+{
+	title: Human, All-Too-Human: A Book for Free Spirits, Part 1: Complete Works, Volume Six
+	author: AuthorDto(name=Nietzsche, Friedrich Wilhelm, birth_year=1844, death_year=1900)
+	Subject: Human beings
+	Language: en
+	Downloads: 244
+}
+
+{
+	title: The Joyful Wisdom ("La Gaya Scienza"): Complete Works, Volume Ten
+	author: AuthorDto(name=Nietzsche, Friedrich Wilhelm, birth_year=1844, death_year=1900)
+	Subject: Philosophy
+	Language: en
+	Downloads: 239
+}
+
+{
+	title: Götzen-Dämmerung
+	author: AuthorDto(name=Nietzsche, Friedrich Wilhelm, birth_year=1844, death_year=1900)
+	Subject: Philosophy, German
+	Language: de
+	Downloads: 229
+}
+
+{
+	title: We Philologists: Complete Works of Friedrich Nietzsche, Volume 8
+	author: AuthorDto(name=Nietzsche, Friedrich Wilhelm, birth_year=1844, death_year=1900)
+	Subject: Classical philology
+	Language: en
+	Downloads: 224
+}
+
+{
+	title: Ecce homo, Wie man wird, was man ist
+	author: AuthorDto(name=Nietzsche, Friedrich Wilhelm, birth_year=1844, death_year=1900)
+	Subject: Autobiographies
+	Language: de
+	Downloads: 202
+}
+
+{
+	title: The Antichrist
+	author: AuthorDto(name=Nietzsche, Friedrich Wilhelm, birth_year=1844, death_year=1900)
+	Subject: Christianity -- Controversial literature
+	Language: en
+	Downloads: 186
+}
+
+{
+	title: Menschliches, Allzumenschliches: Ein Buch Fuer Freie Geister
+	author: AuthorDto(name=Nietzsche, Friedrich Wilhelm, birth_year=1844, death_year=1900)
+	Subject: Human beings
+	Language: de
+	Downloads: 173
+}
+
+{
+	title: Die Geburt der Tragödie: Versuch einer Selbstkritik
+	author: AuthorDto(name=Nietzsche, Friedrich Wilhelm, birth_year=1844, death_year=1900)
+	Subject: Aesthetics
+	Language: de
+	Downloads: 153
+}
+
+{
+	title: The Philosophy of Friedrich Nietzsche
+	author: AuthorDto(name=Mencken, H. L. (Henry Louis), birth_year=1880, death_year=1956)
+	Subject: Nietzsche, Friedrich Wilhelm, 1844-1900
+	Language: en
+	Downloads: 143
+}
+
+{
+	title: Thoughts out of Season, Part I
+	author: AuthorDto(name=Nietzsche, Friedrich Wilhelm, birth_year=1844, death_year=1900)
+	Subject: Philosophy, German
+	Language: en
+	Downloads: 140
+}
+
+{
+	title: Ainsi Parlait Zarathoustra
+	author: AuthorDto(name=Nietzsche, Friedrich Wilhelm, birth_year=1844, death_year=1900)
+	Subject: Philosophy, German
+	Language: fr
+	Downloads: 290
 }
 

@@ -1,7 +1,6 @@
 package one.alura.gablibrary.config;
 
 import one.alura.gablibrary.controller.ConsoleAppController;
-import one.alura.gablibrary.repository.LibraryRepository;
 import one.alura.gablibrary.service.LibraryService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
