@@ -27,7 +27,17 @@ public class LibraryService {
 
 
     public void saveBook(Book book){
-        repository.save(book);
+        List<Author> existingAuthors = authorRepository.findByName(book.getAuthor().getName());
+
+        if (existingAuthors.isEmpty() || existingAuthors.get(0) == null) {
+            saveAuthor(book.getAuthor());
+        }
+
+        List<Book> existingBook = repository.findByTitleContaining(book.getTitle());
+
+        if (existingBook.isEmpty() || existingBook.get(0) == null) {
+            repository.save(book);
+        }
     }
 
     public void saveAuthor(Author author){
